@@ -22,9 +22,18 @@ void vec_to_file(const std::vector<double>& dt, const char* f_name){
 }
 
 
-std::vector<double> log_return(const char* f_name){
+std::vector<double> log_return(const std::vector<double>& dt){
+    std::vector<double> lg_return;
+    for (int i = 1; i < dt.size(); i++){
+        double log_return = log(dt[i]/dt[i-1]);
+        lg_return.push_back(log_return);
+    }
+    return lg_return;
+}
+
+
+std::vector<double> adj_return(const char* f_name){
     std::vector<double> adj_return;
-    std::vector<double> s_return;
     
     //Read the file
     FILE* fp = fopen(f_name, "r");
@@ -61,13 +70,7 @@ std::vector<double> log_return(const char* f_name){
         fclose(fp);
     }
 
-    //Calculate Log Return
-    for (int i = 1; i < adj_return.size(); i++){
-        double log_return = log(adj_return[i]/adj_return[i-1]);
-        s_return.push_back(log_return);
-    }
-
-    return s_return;
+    return adj_return;
 }
 
 #endif
