@@ -10,7 +10,7 @@ matplotlib
 statsmodels
 
 Compile:
-$g++ main.cpp -o main $(/usr/bin/python3-config --embed --ldflags)
+$ g++ main.cpp -o main $(/usr/bin/python3-config --embed --ldflags)
 
 Usage:
 $./main <stock1>.csv <stock2>.csv
