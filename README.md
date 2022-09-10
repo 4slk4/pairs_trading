@@ -1,13 +1,16 @@
 # Pairs trading project for Summer Research Experience 2022
 Requirement:
-Python 3.10
+Linux kernel 5.11 or greater
+C++11 or greater
+GCC 8.2 or greater
+Python 3.10 or greater
 pandas
 numpy
 matplotlib
 statsmodels
 
-When you compile:
-g++ main.cpp -o main $(/usr/bin/python3-config --embed --ldflags)
+Compile:
+$g++ main.cpp -o main $(/usr/bin/python3-config --embed --ldflags)
 
-When run the 'main' file:
-./main <stock1>.csv <stock2>.csv
+Usage:
+$./main <stock1>.csv <stock2>.csv
