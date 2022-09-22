@@ -1,4 +1,4 @@
-# Pairs trading project for Summer Research Experience 2022
+# Pairs trading project
 Requirement:
 Linux kernel 5.11 or greater
 C++11 or greater
